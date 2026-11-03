@@ -22,7 +22,7 @@ The installer does the following:
 | Action | Command |
 |---|---|
 | Install / upgrade (keeps all settings) | `sh /tmp/sb-install.sh` |
-| Upgrade from the web interface (1.5.0+) | **Settings → App update → Update app** |
+| Upgrade from the web interface (1.5.0+) | **Update** tab → **Update app** |
 | Remove the app (keeps settings and data) | `sh /tmp/sb-install.sh uninstall` |
 | Remove everything | `sh /tmp/sb-install.sh purge` |
 | Download through a GitHub mirror | `GH_PROXY=https://ghfast.top/ sh /tmp/sb-install.sh` |
@@ -74,8 +74,8 @@ Iranian sites go direct and ads are blocked by default.
 - **Full speed**:
   - **Maximum performance** mode (default): sing-box uses all CPU cores and the free RAM, packet steering, irqbalance, BBR, larger buffers, flow offloading
   - removes fixed Hysteria2 / Brutal bandwidth caps (BBR), optional multiplex off
-- **Core version picker** for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, or the OpenWrt package. The new core is verified before the old one is removed.
-- **One-click app updates** from this repository under **Settings → App update** (settings, subscriptions, profiles and the chosen core are kept).
+- **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, or the OpenWrt package. The new core is verified before the old one is removed.
+- **One-click app updates** from this repository on the **Update** tab (settings, subscriptions, profiles and the chosen core are kept).
 - **Dashboard**:
   - live speed in KB/s, connections, memory
   - logs with an on/off switch
@@ -94,7 +94,7 @@ Iranian sites go direct and ads are blocked by default.
 
 ## Xray core (XHTTP / mKCP)
 
-sing-box has no XHTTP, mKCP or VLESS encryption. Nodes that need them run through Xray. Install it once under **Settings → Xray core** (official build or the `xray-core` package) or with:
+sing-box has no XHTTP, mKCP or VLESS encryption. Nodes that need them run through Xray. Install it once on the **Update** tab (Xray core) (official build or the `xray-core` package) or with:
 
 ```sh
 singbox-ctl xray-install latest
@@ -182,7 +182,7 @@ wget -O /tmp/sb-install.sh https://raw.githubusercontent.com/Danialrostamani/Luc
 
 بعد صفحهٔ مرورگر را رفرش کنید و به **Services ← sing-box** بروید. نصب اول، آخرین نسخهٔ پایدار هستهٔ sing-box را هم از GitHub نصب می‌کند.
 
-- **آپدیت:** از نسخهٔ 1.5.0 به بعد از داخل برنامه: **Settings ← App update ← Update app**. یا همان دستور نصب را دوباره بزنید. تنظیمات حفظ می‌شوند.
+- **آپدیت:** از نسخهٔ 1.5.0 به بعد از داخل برنامه: سربرگ **Update** ← **Update app**. یا همان دستور نصب را دوباره بزنید. تنظیمات حفظ می‌شوند.
 - **حذف:** `sh /tmp/sb-install.sh uninstall`
 - **حذف کامل همراه با تنظیمات:** `sh /tmp/sb-install.sh purge`
 - **اگر GitHub کند است:** `GH_PROXY=https://ghfast.top/ sh /tmp/sb-install.sh`
@@ -192,7 +192,7 @@ wget -O /tmp/sb-install.sh https://raw.githubusercontent.com/Danialrostamani/Luc
 2. در **Overview** دکمهٔ روشن را بزنید.
 3. در **Nodes** گزینهٔ **Test all** را بزنید و یک نود (یا Auto) را انتخاب کنید.
 
-**نودهای XHTTP و mKCP:** هستهٔ Xray را از **Settings ← Xray core** نصب کنید. User-Agent ساب را روی **v2rayNG** بگذارید.
+**نودهای XHTTP و mKCP:** هستهٔ Xray را از سربرگ **Update** نصب کنید. User-Agent ساب را روی **v2rayNG** بگذارید.
 
 **نصب خودکار داخل فرم‌ور:** بخش «Pre-installed in your firmware» بالا را ببینید. لیست پکیج‌ها و اسکریپت first boot را در Firmware Selector وارد کنید.
 
