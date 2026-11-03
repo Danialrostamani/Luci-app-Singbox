@@ -1,5 +1,6 @@
 #!/bin/sh
 # luci-app-singbox - online installer
+# Copyright (C) 2026 Danial Rostamani. All rights reserved. See LICENSE.
 # https://github.com/Danialrostamani/Luci-app-Singbox
 #
 # Install / upgrade (settings are kept):
