@@ -49,7 +49,7 @@ Iranian sites go direct and ads are blocked by default.
   - Clash / Mihomo YAML, sing-box JSON, Xray JSON
   - automatic updates and usage / expiry display
   - include / exclude filters, custom User-Agent
-- **Profiles** run complete sing-box configurations, like profiles in the sing-box apps:
+- **Profiles** run complete sing-box configurations, like profiles in the sing-box apps, or any **subscription link** (share links, base64, Clash, Xray JSON) with the built-in routing and DNS:
   - remote profiles (auto-update) or local ones
   - switch with one click, check, export, duplicate
   - adapted for the router automatically; a broken profile falls back to the built-in configuration instead of cutting the network
@@ -57,6 +57,7 @@ Iranian sites go direct and ads are blocked by default.
   - VLESS (Reality, Vision), VMess, Trojan, Shadowsocks (2022, obfs, v2ray-plugin)
   - Hysteria2 (port hopping, salamander), Hysteria, TUIC, AnyTLS, WireGuard, SOCKS, HTTP(S)
   - transports: WebSocket, gRPC, HTTP/2, HTTPUpgrade, QUIC; uTLS
+- **Core choice per subscription / profile**: Auto (sing-box, Xray only where needed), Xray (VLESS / VMess / Trojan / Shadowsocks through Xray), or sing-box only.
 - **XHTTP (SplitHTTP), mKCP, VLESS encryption and Xray JSON configs** through an optional **Xray core** that runs next to sing-box. These nodes still behave like normal nodes: switching, Auto, latency tests and routing all work.
 - **Mobile-style node picker**:
   - colour-coded latency, **Test all** (also while the service is stopped)
