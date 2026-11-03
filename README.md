@@ -22,7 +22,7 @@ The installer does the following:
 | Action | Command |
 |---|---|
 | Install / upgrade (keeps all settings) | `sh /tmp/sb-install.sh` |
-| Upgrade from the web interface (1.5.0+) | **Update** tab → **Update app** |
+| Upgrade from the web interface | **Update** tab → **Update app** |
 | Remove the app (keeps settings and data) | `sh /tmp/sb-install.sh uninstall` |
 | Remove everything | `sh /tmp/sb-install.sh purge` |
 | Download through a GitHub mirror | `GH_PROXY=https://ghfast.top/ sh /tmp/sb-install.sh` |
@@ -182,7 +182,7 @@ wget -O /tmp/sb-install.sh https://raw.githubusercontent.com/Danialrostamani/Luc
 
 بعد صفحهٔ مرورگر را رفرش کنید و به **Services ← sing-box** بروید. نصب اول، آخرین نسخهٔ پایدار هستهٔ sing-box را هم از GitHub نصب می‌کند.
 
-- **آپدیت:** از نسخهٔ 1.5.0 به بعد از داخل برنامه: سربرگ **Update** ← **Update app**. یا همان دستور نصب را دوباره بزنید. تنظیمات حفظ می‌شوند.
+- **آپدیت:** از داخل برنامه: سربرگ **Update** ← **Update app**. یا همان دستور نصب را دوباره بزنید. تنظیمات حفظ می‌شوند.
 - **حذف:** `sh /tmp/sb-install.sh uninstall`
 - **حذف کامل همراه با تنظیمات:** `sh /tmp/sb-install.sh purge`
 - **اگر GitHub کند است:** `GH_PROXY=https://ghfast.top/ sh /tmp/sb-install.sh`
@@ -196,6 +196,14 @@ wget -O /tmp/sb-install.sh https://raw.githubusercontent.com/Danialrostamani/Luc
 
 **نصب خودکار داخل فرم‌ور:** بخش «Pre-installed in your firmware» بالا را ببینید. لیست پکیج‌ها و اسکریپت first boot را در Firmware Selector وارد کنید.
 
+## Author
+
+**Danial Rostamani** · Telegram: [t.me/Drostamani](https://t.me/Drostamani)
+
 ## License
 
-GPL-3.0-or-later. See [LICENSE](LICENSE).
+© 2026 Danial Rostamani. All rights reserved.
+
+You may **download, install and use** luci-app-singbox free of charge on any number of devices. You may **not** copy, redistribute, modify or publish changed versions, or remove the author's credits, without written permission. See [LICENSE](LICENSE). For permissions, contact the author on Telegram.
+
+sing-box, Xray and the other programs the app downloads are separate works under their own licenses.
