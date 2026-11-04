@@ -56,7 +56,7 @@ Iranian sites go direct and ads are blocked by default.
 - **Protocols**:
   - VLESS (Reality, Vision), VMess, Trojan, Shadowsocks (2022, obfs, v2ray-plugin)
   - Hysteria2 (port hopping, salamander), Hysteria, TUIC, AnyTLS, WireGuard, SOCKS, HTTP(S)
-  - WireGuard `.conf` files: upload them under Nodes → Add nodes → Upload file (several peers supported; AmneziaWG is not supported by sing-box)
+  - WireGuard `.conf` files: upload them under Nodes → Add nodes → Upload file (with an active profile: Profiles → Add profile → Local → Upload file) (several peers supported; AmneziaWG is not supported by sing-box)
   - transports: WebSocket, gRPC, HTTP/2, HTTPUpgrade, QUIC; uTLS
 - **Core choice per subscription / profile**: Auto (sing-box, Xray only where needed), Xray (VLESS / VMess / Trojan / Shadowsocks through Xray), or sing-box only.
 - **XHTTP (SplitHTTP), mKCP, VLESS encryption and Xray JSON configs** through an optional **Xray core** that runs next to sing-box. These nodes still behave like normal nodes: switching, Auto, latency tests and routing all work.
