@@ -78,7 +78,7 @@ Iranian sites go direct and ads are blocked by default.
   - removes fixed Hysteria2 / Brutal bandwidth caps (BBR), optional multiplex off
 - **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, or the OpenWrt package. The new core is verified before the old one is removed.
 - **One-click app updates** from this repository on the **Update** tab (settings, subscriptions, profiles and the chosen core are kept).
-- **Update badge**: a red dot on the **Update** tab when a newer app, sing-box or Xray version is out (the router checks GitHub in the background every 6 hours; “Check now” on the Update tab).
+- **Update badge**: a red dot on the **Update** tab when a newer app, sing-box or Xray version is out (the router checks GitHub in the background every hour, and right after the app was updated; “Check now” on the Update tab).
 - **Speed test** per node: download / upload in Mbps, through a temporary instance, also while the service is stopped.
 - **Devices & traffic**: live speed and traffic per LAN device (Connections page), speed chart of the last minutes on the overview, live CPU of sing-box, Xray and the router.
 - **Quick rules**: one click for Telegram, Instagram / WhatsApp / Facebook, YouTube & Google, X, AI services, Netflix & Spotify via proxy, torrents or online games direct.
