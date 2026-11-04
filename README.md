@@ -81,6 +81,7 @@ Iranian sites go direct and ads are blocked by default.
 - **Update badge**: a red dot on the **Update** tab when a newer app, sing-box or Xray version is out (the router checks GitHub in the background every hour, and right after the app was updated; “Check now” on the Update tab).
 - **OpenVPN** (sing-box 1.14+): upload a `.ovpn` file under Nodes → Add nodes (inline certificates, tls-auth / tls-crypt, username/password).
 - **AmneziaWG** (optional packages, Update tab): AmneziaWG `.conf` files run as a system interface that sing-box uses like any other node.
+- **Auto-tune** tab: the router tries TPROXY / TUN (system, mixed, gvisor), BBR / Brutal, multiplex, memory mode and priority one group at a time, measures real speed and keeps the fastest settings for its CPU and RAM (with one-click restore).
 - **Tools** tab: Network Quality (Apple RPM test) and STUN / NAT type test through any node or direct, like the sing-box apps.
 - **Speed test** per node: download / upload in Mbps, through a temporary instance, also while the service is stopped.
 - **Devices & traffic**: live speed and traffic per LAN device (Connections page), speed chart of the last minutes on the overview, live CPU of sing-box, Xray and the router.
