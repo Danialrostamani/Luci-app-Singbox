@@ -72,16 +72,16 @@ Iranian sites go direct and ads are blocked by default.
   - live **Rule / Global / Direct** switch
 - **Leak-free DNS**:
   - remote DNS through the proxy (`tcp://1.1.1.1` by default), direct DNS `local`
-  - DoH / DoT / DoQ, FakeIP, automatic dnsmasq integration
+  - DoH / DoT / DoQ, FakeIP, automatic dnsmasq integration, and one-click Anti-Censorship DNS preset
 - **Full speed**:
   - **Maximum performance** mode (default): sing-box uses all CPU cores and the free RAM, packet steering, irqbalance, BBR, larger buffers, flow offloading
   - removes fixed Hysteria2 / Brutal bandwidth caps (BBR), optional multiplex off
+- **Auto node fallback**: background watchdog automatically switches to "Auto (best)" if the selected node becomes unreachable.
 - **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, or the OpenWrt package. The new core is verified before the old one is removed.
 - **One-click app updates** from this repository on the **Update** tab (settings, subscriptions, profiles and the chosen core are kept).
 - **Update badge**: a red dot on the **Update** tab when a newer app, sing-box or Xray version is out (the router checks GitHub in the background every hour, and right after the app was updated; “Check now” on the Update tab).
 - **OpenVPN** (sing-box 1.14+): upload a `.ovpn` file under Nodes → Add nodes (inline certificates, tls-auth / tls-crypt, username/password).
-- **AmneziaWG** (optional packages, Update tab): AmneziaWG `.conf` files run as a system interface that sing-box uses like any other node.
-- **Auto-tune** tab: the router tries TPROXY / TUN (system, mixed, gvisor), BBR / Brutal, multiplex, memory mode and priority one group at a time, measures real speed and keeps the fastest settings for its CPU and RAM (with one-click restore).
+- **AmneziaWG** (optional packages, Update tab): AmneziaWG `.conf` files run as system interfaces with automatic network interface and firewall zone setup.
 - **Tools** tab: Network Quality (Apple RPM test) and STUN / NAT type test through any node or direct, like the sing-box apps.
 - **Speed test** per node: download / upload in Mbps, through a temporary instance, also while the service is stopped.
 - **Devices & traffic**: live speed and traffic per LAN device (Connections page), speed chart of the last minutes on the overview, live CPU of sing-box, Xray and the router.

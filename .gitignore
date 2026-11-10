@@ -1,0 +1,3 @@
+luci-app-singbox_*_all/
+*.tmp
+.DS_Store
