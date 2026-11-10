@@ -39,10 +39,11 @@ fetch() {
 }
 
 download() {
+	TS="$(date +%s 2>/dev/null || echo 1)"
 	for url in \
-		"${GH_PROXY}https://raw.githubusercontent.com/$REPO/$BRANCH/$FILE" \
-		"${GH_PROXY}https://github.com/$REPO/raw/$BRANCH/$FILE" \
-		"https://cdn.jsdelivr.net/gh/$REPO@$BRANCH/$FILE"; do
+		"${GH_PROXY}https://raw.githubusercontent.com/$REPO/$BRANCH/$FILE?$TS" \
+		"${GH_PROXY}https://github.com/$REPO/raw/$BRANCH/$FILE?$TS" \
+		"https://cdn.jsdelivr.net/gh/$REPO@$BRANCH/$FILE?$TS"; do
 		msg "Downloading $url"
 		rm -f "$WORK/$FILE"
 		if fetch "$url" "$WORK/$FILE" && tar tzf "$WORK/$FILE" >/dev/null 2>&1; then
