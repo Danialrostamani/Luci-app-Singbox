@@ -27,6 +27,7 @@ The installer does the following:
 | Remove everything | `sh /tmp/sb-install.sh purge` |
 | Download through a GitHub mirror | `GH_PROXY=https://ghfast.top/ sh /tmp/sb-install.sh` |
 | Keep the OpenWrt sing-box package as core | `NO_CORE_UPDATE=1 sh /tmp/sb-install.sh` |
+| Force sing-box-tiny (low RAM/flash routers) | `USE_TINY=1 sh /tmp/sb-install.sh` |
 
 **Manual / offline install:** copy `luci-app-singbox.tar.gz` to `/tmp` on the router, then run:
 
@@ -77,7 +78,8 @@ Iranian sites go direct and ads are blocked by default.
   - **Maximum performance** mode (default): sing-box uses all CPU cores and the free RAM, packet steering, irqbalance, BBR, larger buffers, flow offloading
   - removes fixed Hysteria2 / Brutal bandwidth caps (BBR), optional multiplex off
 - **Auto node fallback**: background watchdog automatically switches to "Auto (best)" if the selected node becomes unreachable.
-- **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, or the OpenWrt package. The new core is verified before the old one is removed.
+- **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, the standard OpenWrt package, or **sing-box-tiny** (for routers with limited flash or RAM). The new core is verified before the old one is removed.
+- **Low-resource router optimization**: Auto-detects routers with low storage (< 50MB free overlay) or low RAM (< 256MB) to automatically switch to `sing-box-tiny`, apply Go memory limit caps (`GOMEMLIMIT`), and tune Go GC (`GOGC=50`) to avoid OOM panics.
 - **One-click app updates** from this repository on the **Update** tab (settings, subscriptions, profiles and the chosen core are kept).
 - **Update badge**: a red dot on the **Update** tab when a newer app, sing-box or Xray version is out (the router checks GitHub in the background every hour, and right after the app was updated; “Check now” on the Update tab).
 - **OpenVPN** (sing-box 1.14+): upload a `.ovpn` file under Nodes → Add nodes (inline certificates, tls-auth / tls-crypt, username/password).
