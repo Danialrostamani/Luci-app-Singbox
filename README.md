@@ -77,6 +77,12 @@ Iranian sites go direct and ads are blocked by default.
 - **Full speed**:
   - **Maximum performance** mode (default): sing-box uses all CPU cores and the free RAM, packet steering, irqbalance, BBR, larger buffers, flow offloading
   - removes fixed Hysteria2 / Brutal bandwidth caps (BBR), optional multiplex off
+- **Client Policy Routing**: Dedicated section in Routing tab allowing per-device routing policies (by LAN IP or MAC address) to send specific devices (Smart TVs, gaming consoles, specific phones) through chosen nodes, direct, or blocked, with optional domain filtering.
+- **Emergency Auto-Failover**: Automatically switches to a configured backup profile or the built-in configuration if all nodes in the active profile become unreachable (4 consecutive health checks), preventing network outages.
+- **Subscription Update Schedule**: Flexible cron scheduler in Web UI for refreshing subscriptions (every 1h, 2h, 4h, 6h, 12h, daily at 04:00 AM, or disabled), with editable intervals in the subscription table.
+- **Eco / Low-Power Mode**: Suspends frontend polling and graph rendering when the browser tab is hidden, tunes Go runtime (`GODEBUG=madvdontneed=1`, `GOGC=30`) to immediately return freed RAM to the kernel, and lowers CPU load on weak routers.
+- **Send Backup to Telegram**: One-click action to export and transmit configuration backups directly to your Telegram chat as a `.json` document, with optional automated weekly backup.
+- **Split DNS**: Domain-specific custom DNS resolvers (under DNS tab) to route company intranet, corporate VPN, or local domain queries (`*.corp.local`) to designated DNS servers over direct or proxy detours.
 - **Auto node fallback**: background watchdog automatically switches to "Auto (best)" if the selected node becomes unreachable.
 - **Core version picker** (Update tab) for sing-box (1.12+) and Xray (24.11+): any release, a pre-release, the standard OpenWrt package, or **sing-box-tiny** (for routers with limited flash or RAM). The new core is verified before the old one is removed.
 - **Low-resource router optimization**: Auto-detects routers with low storage (< 50MB free overlay) or low RAM (< 256MB) to automatically switch to `sing-box-tiny`, apply Go memory limit caps (`GOMEMLIMIT`), and tune Go GC (`GOGC=50`) to avoid OOM panics.
