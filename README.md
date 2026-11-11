@@ -50,6 +50,11 @@ Iranian sites go direct and ads are blocked by default.
   - Clash / Mihomo YAML, sing-box JSON, Xray JSON
   - automatic updates and usage / expiry display
   - include / exclude filters, custom User-Agent
+- **Profiles & Subscriptions UX (v1.1.0)**:
+  - **Segmented sub-tabs**: Clear distinction between **Standard Mode** (subscriptions merged with Iran direct routing & anti-leak DNS) and **Advanced Mode** (running complete external profiles).
+  - **Dynamic English Status Banner**: Real-time service state, current mode (`Built-in Mode` vs `Profile Mode`), active outbound node, and quick-switch action.
+  - **Source Filtering**: Filter pills for `All sources`, `Manual nodes`, and individual subscriptions with live counts.
+  - **Smart Import**: Paste a subscription URL directly into the "Add nodes" modal to auto-detect and configure it.
 - **Profiles** run complete sing-box configurations, like profiles in the sing-box apps, or any **subscription link** (share links, base64, Clash, Xray JSON) with the built-in routing and DNS:
   - remote profiles (auto-update) or local ones
   - switch with one click, check, export, duplicate
@@ -212,6 +217,12 @@ wget -O /tmp/sb-install.sh https://raw.githubusercontent.com/Danialrostamani/Luc
 1. در **Profiles ← Subscriptions** لینک ساب را اضافه کنید و **Update now** بزنید.
 2. در **Overview** دکمهٔ روشن را بزنید.
 3. در **Nodes** گزینهٔ **Test all** را بزنید و یک نود (یا Auto) را انتخاب کنید.
+
+**ویژگی‌های رابط کاربری در نسخه 1.1.0:**
+- تفکیک کامل تب Profiles به دو بخش «اشتراک‌ها (حالت استاندارد روتر)» و «پروفایل‌های سفارشی (پیشرفته)».
+- بنر راهنما و وضعیت زنده به زبان انگلیسی در بالای تب Nodes همراه با دکمه سوئیچ آسان.
+- فیلتر دانه‌ای نودها بر اساس اشتراک یا نودهای دستی برای جلوگیری از شلوغی لیست.
+- تشخیص خودکار لینک‌های ساب‌اسکریپشن در پنجره افزودن نودها.
 
 **نودهای XHTTP و mKCP:** هستهٔ Xray را از سربرگ **Update** نصب کنید. User-Agent ساب را روی **v2rayNG** بگذارید.
 
