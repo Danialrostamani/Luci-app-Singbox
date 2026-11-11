@@ -15,6 +15,7 @@
 #   USE_TINY=1                     force sing-box-tiny package for low RAM/storage devices
 #   NO_CORE_UPDATE=1               keep the OpenWrt sing-box package instead of the latest GitHub core
 #   NO_DEPS=1                      do not install packages (offline upgrade)
+#   FORCE_DEPS=1                   force package manager reinstall even during update
 
 set -e
 
