@@ -30,12 +30,14 @@ for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor /sys/devices/syst
 done
 info "Locked 4x Cortex-A7 cores to maximum clock speed (716 MHz)"
 
-# 3. Network IRQ affinity across all 4 CPU cores
+# 3. Network IRQ affinity across all CPU cores
 if [ -d /proc/irq ]; then
+    num_cpus=$(grep -c '^processor' /proc/cpuinfo 2>/dev/null || echo 1)
+    mask=$(printf '%x' $(( (1 << num_cpus) - 1 )) 2>/dev/null || echo f)
     for a in /proc/irq/*/smp_affinity; do
-        [ -w "$a" ] && echo f > "$a" 2>/dev/null || true
+        [ -w "$a" ] && echo "$mask" > "$a" 2>/dev/null || true
     done
-    info "Distributed network interrupts across all 4 CPU cores"
+    info "Distributed network interrupts across all $num_cpus CPU cores"
 fi
 
 # 4. Multi-core Packet Steering (RPS)
